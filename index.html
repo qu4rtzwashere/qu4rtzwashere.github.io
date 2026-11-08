@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hunt.</title>
+    <title>Hunt</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #ffeef2;
-            color: #4a4a4a;
+            background-color: #121212; /* Very dark grey background */
+            color: #e0e0e0; /* Light grey text for readability */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -17,27 +17,30 @@
             margin: 0;
         }
         .container {
-            background: white;
+            background: #1e1e1e; /* Slightly lighter dark grey container */
             padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
             text-align: center;
             max-width: 400px;
             width: 90%;
         }
-        h1 { color: #ff6b8b; margin-bottom: 10px; }
+        h1 { color: #ff3355; margin-bottom: 10px; } /* Pinkish red color */
+        p { margin-bottom: 20px; font-size: 16px; line-height: 1.5; }
         input {
             width: 80%;
             padding: 10px;
             font-size: 16px;
-            border: 2px solid #ffccd5;
+            background-color: #2a2a2a; /* Dark input field */
+            color: #ffffff;
+            border: 2px solid #444444;
             border-radius: 8px;
             outline: none;
             text-align: center;
         }
-        input:focus { border-color: #ff6b8b; }
+        input:focus { border-color: #ff3355; } /* Pinkish red focus border */
         button {
-            background-color: #ff6b8b;
+            background-color: #ff3355; /* Pinkish red button */
             color: white;
             border: none;
             padding: 10px 20px;
@@ -47,12 +50,12 @@
             cursor: pointer;
             transition: background 0.2s;
         }
-        button:hover { background-color: #ff4773; }
+        button:hover { background-color: #e61a3c; }
         #response {
             margin-top: 20px;
             font-size: 18px;
             font-weight: bold;
-            color: #d6336c;
+            color: #ff3355; /* Pinkish red response text */
             min-height: 24px;
         }
     </style>
@@ -60,8 +63,8 @@
 <body>
 
 <div class="container">
-    <h1>Congratulations! 🎉</h1>
-    <p>You found the final stop. Enter the secret code to unlock your final message:</p>
+    <h1>Final Stop</h1>
+    <p>Enter the code.:</p>
     
     <input type="text" id="secretInput" placeholder="Enter code here...">
     <br>
@@ -77,15 +80,15 @@ function checkCode() {
     const responseDiv = document.getElementById("response");
 
     // 2. Set your secret code here (must be lowercase)
-    const secretCode = "heart"; 
+    const secretCode = "YAP"; 
 
     // 3. Check the code
     if (guess === secretCode) {
-        responseDiv.innerHTML = "I love you so much i wasted so much of both of our times just to say i love you.";
+        responseDiv.innerHTML = "I love you so incredibly much i wasted so much of both of our times just to say this.";
     } else if (guess === "") {
         responseDiv.innerHTML = "Please enter a code!";
     } else {
-        responseDiv.innerHTML = "not the right code. Try again!";
+        responseDiv.innerHTML = "Not the right code. Try again.";
     }
 }
 </script>
