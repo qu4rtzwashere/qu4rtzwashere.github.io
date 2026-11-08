@@ -1,2 +1,1 @@
-# qu4rtzwashere.github.io
-. .... ...
+If you think you have the code, just type it in.
